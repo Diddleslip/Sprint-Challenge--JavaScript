@@ -74,7 +74,7 @@ const graduates = [
 Once you have the new array created, sort the universities alphabetically and log the result. */
 const universities = [];
 
-graduates.forEach(function(currentValue) {
+graduates.forEach(currentValue => {
   universities.push(currentValue.university); 
 })
 universities.sort();
@@ -87,14 +87,14 @@ The resulting contact information strings should have a space between the first 
 
 Log the result of your new array. */
 const contactInfo = [];
-graduates.forEach(function(currentValue) {
+graduates.forEach(currentValue => {
   contactInfo.push(`${currentValue.first_name} ${currentValue.email}`);
 })
 console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called unisWithUni that contains them all. This will be an array of objects. Log the result. */
 const unisWithUni =
-  graduates.filter(function(currentValue) {
+  graduates.filter(currentValue => {
       return currentValue.university.indexOf("Uni") !== -1
   })
 
@@ -125,7 +125,7 @@ The zoos want to display both the scientific name and the animal name in front o
 
 */
 const displayNames = [];
-zooAnimals.forEach(function(currentValue) {
+zooAnimals.forEach(currentValue => {
   displayNames.push(`Name: ${currentValue.animal_name}, Scientific: ${currentValue.scientific_name}`);
 })
 console.log(displayNames);
@@ -137,7 +137,7 @@ The zoos need a list of all their animal's names (animal_name only) converted to
 */
 
 const lowCaseAnimalNames = 
-zooAnimals.map(function(currentValue) {
+zooAnimals.map(currentValue => {
   return currentValue.animal_name.toLowerCase();
 })
 console.log(lowCaseAnimalNames);
